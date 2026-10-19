@@ -1,7 +1,21 @@
+# Ignore the virtual environment folder (can be hundreds of MB and is machine-specific; recreate it with pip install)
+# Note: your earlier commands used "venv/", not ".venv/", so see the note below
 .venv/
+
+# Ignore Python's compiled bytecode cache folders (auto-generated whenever Python imports a module)
 __pycache__/
+
+# Ignore compiled Python files; [cod] matches one letter, so this covers .pyc, .pyo and .pyd
 *.py[cod]
+
+# Ignore pytest's cache folder (stores last-run info such as failed tests)
 .pytest_cache/
+
+# Ignore the .env file, which usually holds secrets (API keys, tokens, passwords) that must never be committed
 .env
+
+# Ignore any folder named .cache, such as the Hugging Face model cache (HF_HOME=/app/.cache/huggingface in your Dockerfile)
 .cache/
+
+# Ignore a local "models" folder, where downloaded or saved model files would be kept (they are large)
 models/
